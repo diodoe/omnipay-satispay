@@ -13,7 +13,7 @@ class TransactionReferenceRequest extends AbstractRequest
     public function getData()
     {
         $this->validate('transactionReference');
-        return array('transactionReference' => $this->getTransactionReference());
+        return ['transactionReference' => $this->getTransactionReference()];
     }
 
     public function sendData($data)

@@ -15,10 +15,10 @@ class CreditCardRequestTest extends TestCase
     public function testGetData()
     {
         $request = new CreditCardRequest($this->getHttpClient(), $this->getHttpRequest());
-        $request->initialize(array(
+        $request->initialize([
             'amount' => '10.00',
             'card' => $this->getValidCard(),
-        ));
+        ]);
         $data = $request->getData();
         $this->assertSame('10.00', $data['amount']);
     }
@@ -26,10 +26,10 @@ class CreditCardRequestTest extends TestCase
     public function testCreditCardSuccess()
     {
         // card numbers ending in even number should be successful
-        $options = array(
+        $options = [
             'amount' => '10.00',
             'card' => $this->getValidCard(),
-        );
+        ];
         $options['card']['number'] = '4242424242424242';
         $response = $this->gateway->authorize($options)->send();
 
@@ -43,10 +43,10 @@ class CreditCardRequestTest extends TestCase
     public function testCreditCardFailure()
     {
         // card numbers ending in odd number should be declined
-        $options = array(
+        $options = [
             'amount' => '10.00',
             'card' => $this->getValidCard(),
-        );
+        ];
         $options['card']['number'] = '4111111111111111';
         $response = $this->gateway->authorize($options)->send();
 

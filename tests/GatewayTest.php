@@ -15,10 +15,10 @@ class GatewayTest extends GatewayTestCase
 
     public function testAuthorize()
     {
-        $options = array(
+        $options = [
             'amount' => '10.00',
             'card' => $this->getValidCard(),
-        );
+        ];
         $request= $this->gateway->authorize($options);
 
         $this->assertInstanceOf('\Omnipay\Satispay\Message\CreditCardRequest', $request);
@@ -27,10 +27,10 @@ class GatewayTest extends GatewayTestCase
 
     public function testPurchase()
     {
-        $options = array(
+        $options = [
             'amount' => '10.00',
             'card' => $this->getValidCard(),
-        );
+        ];
         $request= $this->gateway->purchase($options);
 
         $this->assertInstanceOf('\Omnipay\Satispay\Message\CreditCardRequest', $request);
@@ -39,9 +39,9 @@ class GatewayTest extends GatewayTestCase
 
     public function testCompleteAuthorize()
     {
-        $options = array(
+        $options = [
             'transactionReference' => 'abc123'
-        );
+        ];
         $request= $this->gateway->completeAuthorize($options);
 
         $this->assertInstanceOf('\Omnipay\Satispay\Message\TransactionReferenceRequest', $request);
@@ -50,9 +50,9 @@ class GatewayTest extends GatewayTestCase
 
     public function testCapture()
     {
-        $options = array(
+        $options = [
             'transactionReference' => 'abc123'
-        );
+        ];
         $request= $this->gateway->capture($options);
 
         $this->assertInstanceOf('\Omnipay\Satispay\Message\TransactionReferenceRequest', $request);
@@ -61,9 +61,9 @@ class GatewayTest extends GatewayTestCase
 
     public function testCompletePurchase()
     {
-        $options = array(
+        $options = [
             'transactionReference' => 'abc123'
-        );
+        ];
         $request= $this->gateway->completePurchase($options);
 
         $this->assertInstanceOf('\Omnipay\Satispay\Message\TransactionReferenceRequest', $request);
@@ -72,9 +72,9 @@ class GatewayTest extends GatewayTestCase
 
     public function testRefund()
     {
-        $options = array(
+        $options = [
             'transactionReference' => 'abc123'
-        );
+        ];
         $request= $this->gateway->refund($options);
 
         $this->assertInstanceOf('\Omnipay\Satispay\Message\TransactionReferenceRequest', $request);
@@ -83,9 +83,9 @@ class GatewayTest extends GatewayTestCase
 
     public function testVoid()
     {
-        $options = array(
+        $options = [
             'transactionReference' => 'abc123'
-        );
+        ];
         $request= $this->gateway->void($options);
 
         $this->assertInstanceOf('\Omnipay\Satispay\Message\TransactionReferenceRequest', $request);
@@ -94,10 +94,10 @@ class GatewayTest extends GatewayTestCase
 
     public function testCreateCard()
     {
-        $options = array(
+        $options = [
             'amount' => '10.00',
             'card' => $this->getValidCard(),
-        );
+        ];
         $request= $this->gateway->createCard($options);
 
         $this->assertInstanceOf('\Omnipay\Satispay\Message\CreditCardRequest', $request);
@@ -106,9 +106,9 @@ class GatewayTest extends GatewayTestCase
 
     public function testUpdateCard()
     {
-        $options = array(
+        $options = [
             'cardReference' => 'abc123'
-        );
+        ];
         $request= $this->gateway->updateCard($options);
 
         $this->assertInstanceOf('\Omnipay\Satispay\Message\CardReferenceRequest', $request);
@@ -117,9 +117,9 @@ class GatewayTest extends GatewayTestCase
 
     public function testDeleteCard()
     {
-        $options = array(
+        $options = [
             'cardReference' => 'abc123'
-        );
+        ];
         $request= $this->gateway->deleteCard($options);
 
         $this->assertInstanceOf('\Omnipay\Satispay\Message\CardReferenceRequest', $request);

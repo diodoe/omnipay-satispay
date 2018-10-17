@@ -30,7 +30,8 @@
         "psr-4": { "Omnipay\\Satispay\\" : "src/" }
     },
     "require": {
-        "omnipay/common": "~3.0"
+        "omnipay/common": "~3.0",
+        "friendsofphp/php-cs-fixer": "^2.13"
     },
     "require-dev": {
         "omnipay/tests": "~3.0",

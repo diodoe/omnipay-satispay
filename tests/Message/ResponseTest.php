@@ -10,7 +10,7 @@ class ResponseTest extends TestCase
     {
         $response = new Response(
             $this->getMockRequest(),
-            array('reference' => 'abc123', 'success' => 1, 'message' => 'Success')
+            ['reference' => 'abc123', 'success' => 1, 'message' => 'Success']
         );
 
         $this->assertTrue($response->isSuccessful());
@@ -23,7 +23,7 @@ class ResponseTest extends TestCase
     {
         $response = new Response(
             $this->getMockRequest(),
-            array('reference' => 'abc123', 'success' => 0, 'message' => 'Failure')
+            ['reference' => 'abc123', 'success' => 0, 'message' => 'Failure']
         );
 
         $this->assertFalse($response->isSuccessful());
