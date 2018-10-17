@@ -1,29 +1,29 @@
-# Omnipay: Dummy
+# Omnipay: Satispay
 
-**Dummy driver for the Omnipay PHP payment processing library**
+**Satispay driver for the Omnipay PHP payment processing library**
 
-[![Build Status](https://travis-ci.org/thephpleague/omnipay-dummy.png?branch=master)](https://travis-ci.org/thephpleague/omnipay-dummy)
-[![Latest Stable Version](https://poser.pugx.org/omnipay/dummy/version.png)](https://packagist.org/packages/omnipay/dummy)
-[![Total Downloads](https://poser.pugx.org/omnipay/dummy/d/total.png)](https://packagist.org/packages/omnipay/dummy)
+[![Build Status](https://travis-ci.org/thephpleague/omnipay-satispay.png?branch=master)](https://travis-ci.org/thephpleague/omnipay-satispay)
+[![Latest Stable Version](https://poser.pugx.org/omnipay/satispay/version.png)](https://packagist.org/packages/omnipay/satispay)
+[![Total Downloads](https://poser.pugx.org/omnipay/satispay/d/total.png)](https://packagist.org/packages/omnipay/satispay)
 
 [Omnipay](https://github.com/thephpleague/omnipay) is a framework agnostic, multi-gateway payment
-processing library for PHP 5.3+. This package implements Dummy support for Omnipay.
+processing library for PHP 5.3+. This package implements Satispay support for Omnipay.
 
 ## Installation
 
-Omnipay is installed via [Composer](http://getcomposer.org/). To install, simply require `league/omnipay` and `omnipay/dummy` with Composer:
+Omnipay is installed via [Composer](http://getcomposer.org/). To install, simply require `diodoe/omnipay` and `omnipay/satispay` with Composer:
 
 ```
-composer require league/omnipay omnipay/dummy
+composer require diodoe/omnipay omnipay/satispay
 ```
 
 ## Basic Usage
 
 The following gateways are provided by this package:
 
-* Dummy
+* Satispay
 
-This is a dummy gateway driver intended for testing purposes. If you provide a card number ending in an even number, the driver will return a success response. If it ends in an odd number, the driver will return a generic failure response. For example:
+This is a satispay gateway driver intended for testing purposes. If you provide a card number ending in an even number, the driver will return a success response. If it ends in an odd number, the driver will return a generic failure response. For example:
 
 * 4929000000006 - Success
 * 4444333322221111 - Failure
@@ -41,5 +41,5 @@ If you want to keep up to date with release anouncements, discuss ideas for the 
 or ask more detailed questions, there is also a [mailing list](https://groups.google.com/forum/#!forum/omnipay) which
 you can subscribe to.
 
-If you believe you have found a bug, please report it using the [GitHub issue tracker](https://github.com/thephpleague/omnipay-dummy/issues),
+If you believe you have found a bug, please report it using the [GitHub issue tracker](https://github.com/thephpleague/omnipay-satispay/issues),
 or better yet, fork the library and submit a pull request.
