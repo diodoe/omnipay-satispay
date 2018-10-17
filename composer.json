@@ -1,29 +1,33 @@
 {
-    "name": "omnipay/dummy",
+    "name": "omnipay/satispay",
     "type": "library",
-    "description": "Dummy driver for the Omnipay payment processing library",
+    "description": "Satispay driver for the Omnipay payment processing library",
     "keywords": [
-        "dummy",
+        "satispay",
         "gateway",
         "merchant",
         "omnipay",
         "pay",
         "payment"
     ],
-    "homepage": "https://github.com/thephpleague/omnipay-dummy",
+    "homepage": "https://github.com/diodoe/omnipay-satispay",
     "license": "MIT",
     "authors": [
         {
-            "name": "Adrian Macneil",
-            "email": "adrian@adrianmacneil.com"
+            "name": "Fabio Giannese",
+            "email": "me@diodoe.com"
         },
         {
-            "name": "Omnipay Contributors",
-            "homepage": "https://github.com/thephpleague/omnipay-dummy/contributors"
+            "name": "Germano Zambelli",
+            "homepage": "https://github.com/GermanoZambelli"
+        },
+        {
+            "name": "Massimo Chiarillo",
+            "homepage": "https://github.com/ChiarilloMassimo"
         }
     ],
     "autoload": {
-        "psr-4": { "Omnipay\\Dummy\\" : "src/" }
+        "psr-4": { "Omnipay\\Satispay\\" : "src/" }
     },
     "require": {
         "omnipay/common": "~3.0"
