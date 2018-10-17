@@ -15,9 +15,9 @@ class CardReferenceRequestTest extends TestCase
     public function testGetData()
     {
         $request = new CardReferenceRequest($this->getHttpClient(), $this->getHttpRequest());
-        $request->initialize(array(
+        $request->initialize([
             'cardReference' => 'pass123'
-        ));
+        ]);
         $data = $request->getData();
         $this->assertSame('pass123', $data['cardReference']);
     }
@@ -25,7 +25,7 @@ class CardReferenceRequestTest extends TestCase
     public function testSuccess()
     {
         // reference ids which are even should pass
-        $options = array('cardReference' => '22222');
+        $options = ['cardReference' => '22222'];
         $response = $this->gateway->deleteCard($options)->send();
 
         $this->assertInstanceOf('\Omnipay\Dummy\Message\Response', $response);
@@ -38,7 +38,7 @@ class CardReferenceRequestTest extends TestCase
     public function testFailure()
     {
         // reference ids which are odd should fail
-        $options = array('cardReference' => '33333');
+        $options = ['cardReference' => '33333'];
         $response = $this->gateway->deleteCard($options)->send();
 
         $this->assertInstanceOf('\Omnipay\Dummy\Message\Response', $response);

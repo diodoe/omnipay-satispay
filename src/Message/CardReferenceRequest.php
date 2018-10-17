@@ -13,7 +13,7 @@ class CardReferenceRequest extends AbstractRequest
     public function getData()
     {
         $this->validate('cardReference');
-        return array('cardReference' => $this->getCardReference());
+        return ['cardReference' => $this->getCardReference()];
     }
 
     public function sendData($data)

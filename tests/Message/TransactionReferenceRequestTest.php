@@ -15,9 +15,9 @@ class TransactionReferenceRequestTest extends TestCase
     public function testGetData()
     {
         $request = new TransactionReferenceRequest($this->getHttpClient(), $this->getHttpRequest());
-        $request->initialize(array(
+        $request->initialize([
             'transactionReference' => 'abc123',
-        ));
+        ]);
         $data = $request->getData();
         $this->assertSame('abc123', $data['transactionReference']);
     }
